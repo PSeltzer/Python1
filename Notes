@@ -1,0 +1,468 @@
+Day 1 (Basic Functions)
+>>> str = "Hello"
+>>> rts = str[::-1]
+>>> rts
+'olleH'
+	([::-1] reverses the string str WORKS ON LISTS TOO)
+>>> a = "a generic sentence"
+(Set variable to a string)
+>>> b = list(a)
+>>> b
+['a', ' ', 'g', 'e', 'n', 'e', 'r', 'i', 'c', ' ', 's', 'e', 'n', 't', 'e', 'n', 'c', 'e']
+(Set Variable a to a list)
+>>> c = ".".join(b)
+>>> c
+'a. .g.e.n.e.r.i.c. .s.e.n.t.e.n.c.e'
+	(Join list back into a string with . in between each item)
+>>> d = c.upper()
+>>> d
+'A. .G.E.N.E.R.I.C. .S.E.N.T.E.N.C.E'
+	(Turn whole string uppercase)
+>>> e = c.capitalize()
+>>> e
+'A. .g.e.n.e.r.i.c. .s.e.n.t.e.n.c.e'pass
+	(Capitalize first character of string)
+>>> f = d.lower()
+>>> f
+'a. .g.e.n.e.r.i.c. .s.e.n.t.e.n.c.e'
+	(Make whole string lower case)
+>>> g = e.replace(".","")
+>>> g
+
+'A generic sentence'
+
+(replace all . in the string)
+
+>>> h = g.split(" ")
+>>> h
+['A', 'generic', 'sentence']
+	(split string on the space)
+>>> print(h[1])
+generic
+	(print second item)
+>>> print(h[-1])
+sentence
+	(Print last item)
+print (f”The sentence says: {a}”
+	(could also use.format())
+.strip() 
+(Strips whitespace off a list, can specify characters in the () )
+.append(“insert”)
+	(adds to end of a list)
+>>> range(10)
+range(0, 10)
+	(give a range from0 to num in () ) 
+>>> list(range(10))
+[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+	(puts range in list up to not including num in range() )
+>>> list(range(2,10))
+[2, 3, 4, 5, 6, 7, 8, 9]
+	(gives range from first num up to not including second num and puts in list)
+>>> list(range(2,10,2))
+[2, 4, 6, 8]
+	(gives range from first num up to not including second num at a interval of third num in a list)
+dict()
+	(A dictionary is a collection which is unordered, changeable and indexed)
+.sort()
+	(sorts list from least to greatest value)
+Return arrayofSheeps.count(True)
+	(Return a count of how many True values are in list arrayofSheeps)
+.find()
+	(Find Specified value)
+
+UNDER PYTHON3 IN TERMINAL
+>>> with open("testfile.txt", "w") as file1:
+...     file1.write("This is my string\n")
+... 
+18
+	(writing a string to a file in same directory that python3 is run from)
+	(when using variable instead of .txt use () not “”)
+>>> mylist = ["First Line\n", "Second Line\n", "Third Line\n"]
+>>> with open("testfile.txt", "w") as file1:
+...     file1.writelines(mylist)
+... 
+	(creating a list and writing that list to a file)
+
+count
+
+
+
+>>> with open("testfile.txt", "r") as file1:
+...     file1.read()
+... 
+'First Line
+Second Line
+Third Line'
+	(Reading file)
+>>> with open("testfile.txt", "r") as file1:
+...     len(file1.readlines())
+... 
+3
+	(Getting # of lines in the file)
+>>> with open("testfile.txt", "r") as file1, open("testfile2.txt","w") as file2:
+...     file2.writelines(file1.readlines())
+... 
+	(Copying contents of file1 to file2)
+>>> with open("testfile.txt", "r") as file1:
+...     file1.read(30)
+... 
+'First line\nSecond line\nThird L'
+>>> 
+	(Reads first 30 bytes (byte size can change just 30 for ex))
+emotions = []
+temp = []
+
+with open("emotion_words.txt")as file1:
+    temp = file1.readlines()
+    
+for x in temp:
+    emotions.append(x.split()[0])
+	(Creating a function that appends the first word of every line to a list emotions)
+
+Basic Boolean Logic
+>>> 8 == 8
+True
+
+>>> 8 !=8
+False
+
+>>> 7 != 8
+True
+
+>>> 8 == 8 and 9 == 9
+True
+
+>>> 8 == 8 or 9 == 10
+True
+
+>>> 10> 9
+True
+
+>>> 9 > 10
+False
+
+>>> 9 < 10
+True
+
+>>> 19 < 10
+False
+
+>>> mylist = [1,2,3,4,5,6,7,8,9,10]
+>>> 9 in mylist
+True
+
+>>> mytuple = (1,2,3,4,5,6,7,8,9,10)
+>>> 9 in mytuple
+True
+
+If statements
+>>>if (insert):
+
+>>>elif (insert):
+
+>>>else (insert):
+
+Loops
+>>> a = 0
+>>> while a < 5:
+...     print(a)
+...     a +=1
+... 
+0
+1
+2
+3
+4
+	(While loops execute until condition is met)
+
+
+
+
+
+
+
+
+
+def guess_number(n):
+    value = True
+    while value:
+        num = int(input("Enter a number: "))
+
+        if num > n:
+            print("too high")
+
+        elif num < n:
+            print("too low")
+
+        else:
+            print("WIN")
+            value = False
+        pass
+
+guess_number(23)
+(If running while loop for Tureneed to have condition become false for loop to end)
+
+>>> mylist = [1,2,3,4,5]
+>>> mylist
+[1, 2, 3, 4, 5]
+>>> for x in mylist:
+...     print(x*5)
+... 
+5
+10
+15
+20
+25
+	(For loops go until end of list, and then ends or goes to next set of instructions)
+
+>>> animals = ["Cat", "Dog", "Pig", "Lion"]
+>>> for pets in animals:
+...     print(f"{pets} walks to the water bowl")
+... 
+Cat walks to the water bowl
+Dog walks to the water bowl
+Pig walks to the water bowl
+Lion walks to the water bowl
+	(Ex. of for loop w/strings)
+
+Functions
+Sentence = str(input(“Please enter a sentence: ”))
+def get_count(sentence):
+    vowels = []
+    nonvowels = []
+    base = ["a", "e", "i", "o", "u"]
+    sentence = list(sentence)
+    
+    
+    for char in sentence:
+        if char in base:
+            vowels.append(char)
+        elif char == "":
+            return 0
+        else:
+            nonvowels.append(char)
+    
+    count = len(vowels)
+    return count
+    pass
+	(This function takes a sentence, and returns either a count of all the vowels in the sentence or 0 if the string is empty)
+
+
+
+def disect(lst):
+    temp = (len(lst) // 2)
+    tup = (lst[:temp], lst[temp:])
+    return tup
+    pass
+	(function that splits lst in two parts, a and b, and makes a tuple with two parts (each half of lst)
+	(lst[:temp] is taking from 0 up to the valueof temp from the list, lst[temp:] takes value of temp to the end of the list)   '''
+    Returns a copy of the given string reversed
+    Args:
+        strng (str): a string of alphanumeric characters
+    Returns:
+        str: a copy of the given string reversed
+    '''    
+
+
+Examples of code:
+def q1(floatstr):  
+    new = []
+    a = floatstr.split(",")
+    for element in a:
+        new.append(float(element))
+    
+    return new
+    pass
+	(takes a string separated by , and makes a list of items post sep as floats and returns list of floats)
+
+
+
+
+
+
+def q1(*args):
+    count = 0
+    total = 0
+
+    for number in args:
+        total += number
+        count += 1
+    return float(total/count)
+    pass
+	(taking from a variable length argument list this will return the average of all as a float)
+
+def q1(lst,n):
+    return lst[(-n):]
+    pass
+	(Returns the last n items of a list)
+
+def q1(strng):
+    work = list(strng)
+    end = []
+    b = 0
+    for x in range(len(work)):
+        b = ord(work[x])
+        end.append(b)
+        x += 1
+    return end
+    pass
+	(return ordinal value of given strng by making a list and getting ordinal value of each item, appending to a new list returning new list)
+
+def q1(var):
+    lis = var.split(" ")
+    mytuple = tuple(lis)
+    return mytuple
+    pass
+
+	(splitting given string into a list, and turning that new list into a tuple with each item in tuple being one word from original string)
+
+
+
+def q6(catalog, order):
+    cost = 0
+    for a, b in order:
+        cost += (catalog[a] * b)
+    return cost
+    pass
+	(given a dictionary (catalog) and a list of tuples (order) this calculates the total value of the order list by pulling the cost of each item from the dict and multiplying by the quantity of the item in the order)
+
+def q1(filename):
+    with open((filename), "r")as file1:
+        temp = file1.read()
+        temp = temp.split ("\n")
+        final = len(temp[0])
+        return final
+    pass
+	(opens file, gets and returns length of the first line excluding the new line character at the end)
+
+def q1(filename,lst):
+    with open(filename, "w")as file1:
+        for word in lst:
+            if word.lower() == "stop":
+                break
+            else:
+                file1.write(word + "\n")
+        pass
+	(opens file and writes every entry from the list to the opened files stopping when stop(case sensitive) occurs in the list)
+
+
+
+
+
+
+
+
+
+
+def q1(miltime):
+    if miltime >= 300 and miltime <= 1159:
+        return "Good Morning"
+    elif miltime >= 1200 and miltime <= 1559:
+        return "Good Afternoon"
+    elif miltime >= 1600 and miltime <= 2059:
+        return "Good Evening"
+    elif miltime >= 2100 and miltime <= 2359:
+        return "Good Night"
+    elif miltime >= 0 and miltime <= 259:
+        return "Good Night"
+    pass
+	(Function that returns proper greeting based on miltime variable)
+
+def q1(numlist):
+    x = 0
+    if numlist[x] >= 0:
+        x +=1
+        return True
+    else:
+        return False
+    pass
+	(Returns true if all items in numlist are <= 0 and false if not)
+
+def q1(sentence):
+    temp = sentence.split(" ")
+    temp2 = temp[::-1]
+    final = " ".join(temp2)
+    return final
+    pass
+	(takes a string, splits it up into a list of each word, reverses the list and then makes it a string again to return a string with the words reversed as to the original but still actual words)
+
+
+
+
+
+
+
+
+def q1(n):
+    count = 1
+    n = str(n)
+    temp = list(n[::-1])
+    final = [n[-1]]
+    while count < len(temp):
+        if count % 3 == 0:
+            final.append(",")
+        final.append(temp[count])
+        count += 1
+    return "".join(final)[::-1]
+    pass
+	(takes a given int and takes it and inserts a comma at every 3rd number if needed (65655 to 65,655))
+def q1(lst0, lst1):
+    a = lst0 + lst1
+    b = sorted(a)
+    b = b[::-1]
+    return b
+    pass
+	(takes two lists of n\ints, combines, sorts and then returns them in reverse order)
+def q1(s1,s2,s3):
+    if s1 >= 50 and s1 <= 100:
+        return "GO"
+    else:
+        return "NOGO"
+    if s2 >= 50 and s2 <= 100:
+        return "GO"
+    else:
+        return "NOGO"
+    if s3 >= 50 and s3 <= 100:
+        return "GO"
+    else:
+        return "NOGO"
+    pass
+	(for values between 50 and 100 returns GO and for less than 50 NOGO for 2 vars)
+
+
+
+
+
+def q1(integer, limit):
+    hold = [0]
+    count = 1
+    val = integer
+    while integer <= limit:
+        if (val * count) % 2 == 0:
+            hold.append(val * count)
+        integer = val * count
+        count += 1
+    return hold[:len(hold)-1]
+	(with a given integer and limit this returns a list of multiples of the integer up to and including the limit)
+def q1(lst):
+    j = []
+    for i in lst:
+        j.append(i)
+        if j.count(i) > 1:
+            return i
+	(for a list of ints it finds and returns the first repeated value)
+def q1(strng):
+    a = strng.split(" ")
+    res = min(len(ele) for ele in a)
+    
+    return res
+	(finds and returns length of shortest word in a string)
+def q1(arr):
+    x = 1
+    for i in arr:
+        if x == arr[x]:
+            x += 1
+        elif x != arr[x]:
+            return x + 1
+    pass
+	(for a list of nums in ascending finds and returns first non repeating value)
