@@ -466,3 +466,26 @@ def q1(arr):
             return x + 1
     pass
 	(for a list of nums in ascending finds and returns first non repeating value)
+	def q1(f0, f1):
+    with open(f0, "r")as file1, open(f1, "r")as file2:
+        one = file1.readlines()
+        two = file2.readlines()
+        fin = []
+        for i in range(len(one)):
+            if one[i] != two[i]:
+                fin.append(i)
+        return fin
+	(takes and appends two files and sets to lists, compares the lines and any lines that differ the line num is saved to a list and then that list is returned at the end)
+
+def q1(strng):
+    a = list(strng)
+    sum = []
+    for i in range(len(a)):
+        if a[i].isdigit():
+            sum.append(a[i])
+    sum = "".join(sum)
+    sum = int(sum)
+    ret = chr(sum)
+    return ret
+    
+	(pulls nums out of a string, and returns the ascii character that the numbers pulled out = to)
